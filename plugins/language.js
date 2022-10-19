@@ -1,0 +1,60 @@
+import { createI18n } from 'vue-i18n'
+
+export default defineNuxtPlugin(({vueApp}) => {
+  const i18n = createI18n({
+    legacy: false, 
+    locale: 'en',
+    globalInjection: true,
+    messages: {
+      en: { 
+        languageName: 'Рус.', 
+        downloadButton: 'Download PDF', 
+        personalTitle: 'Software developer', 
+        skillsSectionTitle: 'Fluent skills',
+        myResumeTitle: 'My resume',
+        myResumeDescription: 'I\m a developer with 4+ years of experience. My speciality is in developing applications with Flutter, Dart and Nuxt, but I also love working with Go lang and most other things listed in the skills section below. ',
+        location: 'Location',
+        website: 'Website',
+        email: 'Email',
+        experience: 'Experience',
+        education: 'Education',
+        aboutMe: 'About me',
+        aboutMeDescription: 'I’m a full-stack developer from The United States currently living in Greenwood, SC. I have 4+ years of experience making beautiful web sites, web applications, native mobiles apps, Progressive web apps and REST Apis. I’ve been living abroad in Kyiv, Ukraine and Antalya, Turkey but recently returned to the USA. In my free time I’m usually fishing, hiking or learning rock climbing.',
+        resume: 'Resume',
+        guestbook: 'Guestbook',
+        snippets: 'Snippets',
+        guestbookDescription: 'Sign the guest book and share your thoughts with us.',
+        snippetsDescription: 'I will share my cool snippets for web development.',
+        signTheGuestbook: 'Sign the guestbook',
+        yourMessage: 'Your message...',
+        sign: 'Sign',
+        delete: 'Delete',
+      },
+      ru: { 
+        languageName: 'Eng.',
+        downloadButton: 'Скачать PDF', 
+        personalTitle: 'Программист', 
+        skillsSectionTitle: 'Свободные навыки',
+        myResumeTitle: 'Мое резюме',
+        myResumeDescription: 'I want to help the world to progress and to make it better',
+        location: 'Местоположение',
+        website: 'Вебсайт',
+        email: 'Почта',
+        experience: 'Опыт',
+        education: 'Образование',
+        aboutMe: 'Обо мне',
+        aboutMeDescription: 'I’m a full-stack developer from The United States currently living in Greenwood, SC. I have 4+ years of experience making beautiful web sites, web applications, native mobiles apps, Progressive web apps and REST Apis. I’ve been living abroad in Kyiv, Ukraine and Antalya, Turkey but recently returned to the USA. In my free time I’m usually fishing, hiking or learning rock climbing.',
+        resume: 'Резюме',
+        guestbook: 'Гостевая книга',
+        snippets: 'Фрагменты',
+        guestbookDescription: 'Sign the guest book and share your thoughts with us.',
+        snippetsDescription: 'I will share my cool snippets for web development.',
+        signTheGuestbook: 'Sign the guestbook',
+        yourMessage: 'Your message...',
+        sign: 'Sign',
+        delete: 'Delete',
+      },
+    }
+  })
+  vueApp.use(i18n)
+})

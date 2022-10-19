@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "command",
+            "name": "Run Nuxt 3 App",
+            "program": "npm run dev",
+        },
+
+    ]
+}

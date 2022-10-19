@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer components {} */
+
+@layer utilities {
+  .section-title {
+    @apply text--secondary text-xl font-medium tracking-wider;
+  }
+
+  .page-container {
+    @apply mx-auto flex w-full max-w-4xl px-4;
+  }
+
+  .page-flow {
+    @apply w-full space-y-12 pb-12;
+  }
+
+  .text--primary {
+    @apply text-stone-100;
+  }
+
+  .text--secondary {
+    @apply text-stone-100/60;
+  }
+
+  .shadow--soft {
+    @apply shadow-lg shadow-stone-800/5;
+  }
+
+  .hover-effect {
+    @apply shadow--soft transition duration-300 ease-in-out hover:translate-y-0.5 hover:!shadow-none focus:translate-y-0.5 focus:!shadow-none;
+  }
+
+  .gap {
+    &--default {
+      @apply gap-4 sm:gap-5 md:gap-6 lg:gap-6;
+    }
+  }
+
+  .link {
+    @apply text-blue-400 transition hover:text-blue-600;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-lg bg-stone-50/10 shadow-lg backdrop-blur-2xl transition;
+
+    &__body {
+      @apply flex flex-col space-y-3 p-8;
+    }
+
+    &--default-spacing {
+      @apply space-y-12;
+    }
+
+    &--medium-spacing {
+      @apply space-y-4;
+    }
+
+    &--small-spacing {
+      @apply space-y-2;
+    }
+
+    &--padding {
+      @apply px-5 py-8 lg:px-8;
+    }
+
+    &--hover {
+      @apply hover-effect bg-stone-50/30;
+    }
+  }
+
+  .button {
+    @apply flex w-max items-center justify-center rounded-lg py-3 !px-6 transition;
+
+    svg {
+      @apply mr-2 h-6 w-6 fill-current;
+    }
+
+    span {
+      @apply font-medium;
+    }
+
+    &--stone {
+      @apply text--primary bg-stone-900;
+    }
+
+    &--green {
+      @apply text--primary bg-green-600;
+    }
+
+    &--hover {
+      @apply hover-effect bg-opacity-70;
+    }
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
